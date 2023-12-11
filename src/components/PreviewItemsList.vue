@@ -6,6 +6,7 @@
             :image="item.image"
             :price="item.price"
             :buys="item.buys"
+            :description="item.description"
         />
     </section>
 </template>

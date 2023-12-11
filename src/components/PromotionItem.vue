@@ -5,17 +5,18 @@
                 <h2>Выгодно!</h2>
             </div>
             <div class="item-promotion-upper-part-name">
-                <router-link :to="{ name: 'item', params: { name: name, image: image, price: price}}">
+                <router-link @click.native="scrollToTop" :to="{ name: 'item', query: { name: name, image: image, price: price, description: description}}">
                     {{ name }}
                 </router-link>
-                
             </div>
         </div>
         <div class="item-promotion-lower-part">
             <div class="item-promotion-lower-part-info">
                 <div class="item-promotion-lower-part-price">{{ price + "₽" }}</div>
                 <div class="item-promotion-lower-part-link">
-                    <CustomButton>Подробнее</CustomButton>
+                    <router-link @click.native="scrollToTop" :to="{ name: 'item', query: { name: name, image: image, price: price, description: description}}">
+                        <CustomButton>Подробнее</CustomButton>
+                    </router-link>
                 </div>
             </div>
             <div class="item-promotion-lower-part-image">
@@ -49,6 +50,16 @@ export default {
         price: {
             type: Number,
             required: true
+        },
+        description: {
+            type: String,
+            required: false
+        }
+    },
+
+    methods: {
+        scrollToTop() {
+            window.scrollTo(0, 0);
         }
     }
 }

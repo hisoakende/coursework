@@ -8,51 +8,51 @@
     >
 
         <swiper-slide class="car-brand">
-            <img src="src/assets/audi.png">
+            <img src="/src/assets/audi.png">
         </swiper-slide>
         
         <swiper-slide class="car-brand">
-            <img src="src/assets/bmw.png">
+            <img src="/src/assets/bmw.png">
         </swiper-slide>
 
         <swiper-slide class="car-brand">
-            <img src="src/assets/honda.jpeg">
+            <img src="/src/assets/honda.jpeg">
         </swiper-slide>
 
         <swiper-slide class="car-brand">
-            <img src="src/assets/hyandai.png">
+            <img src="/src/assets/hyandai.png">
         </swiper-slide>
 
         <swiper-slide class="car-brand">
-            <img src="src/assets/lada.png">
+            <img src="/src/assets/lada.png">
         </swiper-slide>
 
         <swiper-slide class="car-brand">
-            <img src="src/assets/toyota.png">
+            <img src="/src/assets/toyota.png">
         </swiper-slide>
         
         <swiper-slide class="car-brand">
-            <img src="src/assets/audi.png">
+            <img src="/src/assets/audi.png">
         </swiper-slide>
         
         <swiper-slide class="car-brand">
-            <img src="src/assets/bmw.png">
+            <img src="/src/assets/bmw.png">
         </swiper-slide>
 
         <swiper-slide class="car-brand">
-            <img src="src/assets/honda.jpeg">
+            <img src="/src/assets/honda.jpeg">
         </swiper-slide>
 
         <swiper-slide class="car-brand">
-            <img src="src/assets/hyandai.png">
+            <img src="/src/assets/hyandai.png">
         </swiper-slide>
 
         <swiper-slide class="car-brand">
-            <img src="src/assets/lada.png">
+            <img src="/src/assets/lada.png">
         </swiper-slide>
 
         <swiper-slide class="car-brand">
-            <img src="src/assets/toyota.png">
+            <img src="/src/assets/toyota.png">
         </swiper-slide>
 
     </swiper>

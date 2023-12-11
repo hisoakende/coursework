@@ -1,7 +1,9 @@
 <template>
     <div class="item-promotion">
         <div class="item-promotion-upper-part">
-            {{ name }}
+            <router-link @click.native="scrollToTop" :to="{ name: 'item', query: { name: name, image: image, price: price, description: description}}">
+                {{ name }}
+            </router-link>
         </div>
         <div class="item-promotion-lower-part">
             <div class="item-promotion-lower-part-info">
@@ -32,7 +34,7 @@ export default {
     
     data() {
         return {
-            text:  getIsInCollection(this.id, "cart") ? "В корзине" : "Купить",
+            text: getIsInCollection(this.id, "cart") ? "В корзине" : "Купить",
             buy: "buy"
         }
     },
@@ -53,10 +55,18 @@ export default {
         price: {
             type: Number,
             required: true
+        },
+        description: {
+            type: String,
+            required: false
         }
     },
 
     methods: {
+        scrollToTop() {
+            window.scrollTo(0, 0);
+        },
+
         changeCart(button) {
             let isInCart = changeCollectionObject(
                 {

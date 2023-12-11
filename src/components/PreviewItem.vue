@@ -5,7 +5,9 @@
         </div>
         <div class="preview-item-info-container">
             <div class="preview-item-info-name">
-                {{ name }}
+                <router-link @click.native="scrollToTop" :to="{ name: 'item', query: { name: name, image: image, price: price, description: description}}">
+                    {{ name }}
+                </router-link>
             </div>
             <div class="preview-item-info-orders">
                 Куплено: {{ buys }} раз
@@ -63,10 +65,17 @@ export default {
         buys: {
             type: Number,
             required: true
+        },
+        description: {
+            type: String,
+            required: false
         }
     },
 
     methods: {
+        scrollToTop() {
+            window.scrollTo(0, 0);
+        },
         changeLike(button) {
             let isLiked = changeCollectionObject(
                 {

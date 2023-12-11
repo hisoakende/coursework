@@ -10,6 +10,7 @@
                 :image="item.image"
                 :price="item.price"
                 :countToBuy="getCountToBuy(item)"
+                :description="item.description"
         />
     </section>
 </template>

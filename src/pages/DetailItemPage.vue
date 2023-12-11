@@ -16,12 +16,12 @@
                             <div class="item-detail-right-container-middle-price-buttons">
                                 <LikeButton v-if="isLiked" @changeLike="changeLike" class="liked"/>
                                 <LikeButton v-else @changeLike="changeLike"/>
-                                <CustomButton v-if="isInCart" :name="buy" @clickbuy="changeCart" :text="text" class="not-hover-button"></CustomButton>
-                                <CustomButton v-else :name="buy" @clickbuy="changeCart" class="not-bought" :text="text"></CustomButton>
+                                <CustomButton v-if="isInCart" :name="'buy'" @clickbuy="changeCart" :text="text" class="not-hover-button"></CustomButton>
+                                <CustomButton v-else :name="'buy'" @clickbuy="changeCart" class="not-bought" :text="text"></CustomButton>
                             </div>
                         </div>
                         <div class="item-detail-right-container-bottom">
-                            Описание описание описание описание описание
+                            {{ description }}
                         </div>
                     </div>
                 </div>
@@ -36,6 +36,7 @@ import DefaultHeader from "@/components/DefaultHeader.vue";
 import CustomButton from "@/components/ui/CustomButton.vue";
 import LikeButton from "@/components/ui/LikeButton.vue";
 import DefaultFooter from "@/components/DefaultFooter.vue";
+import { changeCollectionObject, getIsInCollection } from "@/script.js";
 
 
 export default {
@@ -50,7 +51,9 @@ export default {
         return {
             name: this.$route.query.name,
             image: this.$route.query.image,
-            price: this.$route.query.price
+            price: this.$route.query.price,
+            text: getIsInCollection(this.id, "cart") ? "В корзине" : "Купить",
+            description: this.$route.query.description
         }
     },
 
@@ -111,8 +114,11 @@ export default {
 </script>
   
 <style scoped>
+
 .item-detail {
     display: flex;
+    justify-content: space-between;
+    gap: 30px;
     background-color: #ffffff;
     box-shadow: 0 1px 2px #00000029;
     border-radius: 10px;
@@ -121,6 +127,7 @@ export default {
 
 .item-detail-right-container {
     display: flex;
+    width: 100%;
     flex-direction: column;
     gap: 50px;
 }
@@ -135,10 +142,7 @@ export default {
 }
 
 .item-detail img {
-    max-height: 350px;
-    min-height: 250px;
     max-width: 500px;
-    min-width: 400px;
 }
 
 .item-detail-right-container-middle-price-buttons {

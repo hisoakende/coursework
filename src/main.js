@@ -54,6 +54,7 @@ const router = createRouter({
     {
         path: '/item',
         name: 'item',
+        props: true,
         component: DetailItemPage
     }
   ],

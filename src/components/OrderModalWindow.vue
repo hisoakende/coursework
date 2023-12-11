@@ -2,7 +2,7 @@
     <div class="modal-background">
         <div class="modal-active">
             <div @click="modalClose" class="modal-close">
-                <img src="src/assets/cross.png" />
+                <img src="/src/assets/cross.png" />
             </div>
             <div @click.stop class="modal-window">
                 <div>
@@ -33,7 +33,7 @@
                             :type="'tel'"
                             :placeholder="'Номер телефона'" 
                         />
-                        <CustomButton @submit="makeOrder" class="inverse-button-color" type="submit">
+                        <CustomButton @click="makeOrder" class="inverse-button-color" type="submit">
                             Заказать доставку
                         </CustomButton>
                     </div>
@@ -79,11 +79,11 @@ export default {
 }
 
 .modal-active {
-    position: absolute;
     width: 450px;
+    left: calc(50% - 225px);
+    position: absolute;
     height: 400px;
     top: calc(50% - 200px);
-    left: calc(50% - 225px);
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     cursor: default;
@@ -92,8 +92,8 @@ export default {
 
 .modal-close {
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: 0px;
+    top: 0px;
     width: 30px;
     height: 30px;
     cursor: pointer;

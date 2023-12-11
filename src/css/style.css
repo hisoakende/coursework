@@ -92,6 +92,15 @@ a {
 }
 
 @media screen and (max-width: 900px) and (min-width: 681px) {
+    .item-detail {
+        flex-direction: column;
+    }
+
+    .item-detail-left-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .buy-item-left-container {
         margin: 0 auto;
     }
@@ -132,6 +141,15 @@ a {
 }
 
 @media screen and (max-width: 680px) and (min-width: 581px) {
+    .item-detail {
+        flex-direction: column;
+    }
+
+    .item-detail-left-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .buy-item-left-container {
         margin: 0 auto;
     }
@@ -188,11 +206,98 @@ a {
     }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 580px) and (min-width: 451px) {
+    .item-detail {
+        flex-direction: column;
+    }
+
+    .item-detail-left-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .buy-item-left-container {
         margin: 0 auto;
     }
-    
+
+    .buy-window {
+        width: 100% !important;
+    }
+
+    .preview-item-image-container {
+        margin: 0px auto;
+    }
+
+    .content-wrapper-buy {
+        flex-direction: column;
+    }
+
+    .buy-item {
+        flex-direction: column;
+    }
+
+    .preview-item {
+        flex-direction: column;
+    }
+
+    .content-wrapper-category {
+        flex-direction: column;
+    }
+
+    .items-filters {
+        position: static !important;
+        width: 100% !important;
+    }
+
+    .items-filters-price-input {
+        width: 100% !important;
+    }
+
+    .content-contacts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-wrapper {
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .company-info {
+        font-size: 17px;
+    }
+
+    .company-contacts img {
+        width: 300px;
+    }
+
+    main {
+        padding: 0 10px 555px 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .item-detail img {
+        max-width: 300px !important;
+    }
+
+    .modal-active {
+        width: 320px !important;
+        left: calc(50% - 160px) !important;
+    }
+    .item-detail {
+        flex-direction: column;
+    }
+
+    .item-detail-left-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buy-item-left-container {
+        margin: 0 auto;
+    }
+
     .buy-window {
         width: 100% !important;
     }

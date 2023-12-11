@@ -5,7 +5,9 @@
         </div>
         <div class="buy-item-central-container">
             <div class="buy-item-info-name">
-                {{ name }}
+                <router-link @click.native="scrollToTop" :to="{ name: 'item', query: { name: name, image: image, price: price, description: description}}">
+                    {{ name }}
+                </router-link>
             </div>
             <div class="buy-item-count-container">
                 <div class="buy-item-count-buttons">
@@ -68,10 +70,17 @@ export default {
         countToBuy: {
             type: Number,
             required: true
+        },
+        description: {
+            type: String,
+            required: false
         }
     },
 
     methods: {
+        scrollToTop() {
+            window.scrollTo(0,0);
+        },
         changeLike(button) {
             let isLiked = changeCollectionObject(
                 {
@@ -106,12 +115,10 @@ export default {
         },
 
         minusCount(arg) {
-            console.log(arg);
             this.$emit('minusCount', this.id);
         },
 
         plusCount(arg) {
-            console.log(arg);
             this.$emit('plusCount', this.id);
         }
     },

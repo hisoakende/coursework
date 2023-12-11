@@ -1,7 +1,7 @@
 <template>
     <section class="company-contacts">
         <div class="company-contacts-image">
-            <img src="src/assets/parts.jpeg">
+            <img src="/src/assets/parts.jpeg">
         </div>        
         <div class="company-contacts-card">
             <div class="company-contacts-card-wrapper">
